@@ -56,4 +56,11 @@ describe('Sync...', () => {
             .click()
             .should('have.value', '1')
     })
+    it.only('Should vs Then', () => {
+        cy.get('#buttonListDOM').click()
+        cy.get('#lista li span').then($el => {
+            console.log($el)
+            expect($el).to.have.length(1)
+        })
+    })
 })
