@@ -50,4 +50,10 @@ describe('Sync...', () => {
             .should('have.length', 2)    
 
     })
+    it.only('Click retry', () => {
+        cy.get('#buttonCount')
+            .click()
+            .click()
+            .should('have.value', '1')
+    })
 })
